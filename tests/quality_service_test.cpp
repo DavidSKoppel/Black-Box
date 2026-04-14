@@ -10,8 +10,8 @@ TEST_F(QualityServiceTest, GradeBoundaries) {
     EXPECT_EQ(service.calculateGrade(90), "A");
     EXPECT_EQ(service.calculateGrade(80), "B");
     EXPECT_EQ(service.calculateGrade(70), "C");
-    EXPECT_EQ(service.calculateGrade(61), "D");
-    EXPECT_EQ(service.calculateGrade(60), "F");
+    EXPECT_EQ(service.calculateGrade(61), "D"); // added
+    EXPECT_EQ(service.calculateGrade(60), "F"); // fixed
     EXPECT_EQ(service.calculateGrade(-1), "Ugyldig");
     EXPECT_EQ(service.calculateGrade(101), "Ugyldig");
 }
