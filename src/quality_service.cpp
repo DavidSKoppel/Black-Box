@@ -55,7 +55,7 @@ std::string QualityService::formatUsername(const std::string& name) const {
 double QualityService::calculateSensorAverage(const std::vector<int>& values) const {
     if (values.empty()) return 0.0;
     int sum = std::accumulate(values.begin(), values.end(), 0);
-    return static_cast<double>(sum / values.size());
+    return static_cast<double>(sum) / values.size();
 }
 
 std::string QualityService::evaluateSensorHealth(const std::vector<int>& values) const {
